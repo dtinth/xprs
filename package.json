@@ -22,5 +22,27 @@
     "method-override": "^3.0.0",
     "morgan": "^1.10.0",
     "serve-static": "^1.14.1"
-  }
+  },
+  "name": "xprs",
+  "description": "A bundle of most-commonly-used middlewares for express, based on analyzing over 80,000 public GitHub repos on BigQuery.",
+  "version": "0.0.1-hey-thanks-for-trying-out-xprs-hope-you-liked-it.1",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtinth/xprs.git"
+  },
+  "author": "Thai Pangsakulyanont <org.yi.dttvb@gmail.com> (http://dt.in.th/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dtinth/xprs/issues"
+  },
+  "homepage": "https://github.com/dtinth/xprs#readme"
 }
