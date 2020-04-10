@@ -6,22 +6,6 @@ I am tired of having to install various common Express middlewares such as `body
 I think, some middlewares are just used so often they could have been in the core.
 So I ran some numbers on Google BigQuery to find out which are the most commonly used Express middleware
 
-## Middleware list
-
-Having looked at 126,822 files from 80,151 repositories, I came up with a list of top Express middlewares.
-
-| Middleware              | Popularity (number of repos, █ = 1k repos) |
-| ----------------------- | ------------------------------------------ |
-| `serve-static`          | ██████████████████████████████████████     |
-| `body-parser`           | ████████████████████████████               |
-| `morgan`                | ██████████████████████████                 |
-| `cookie-parser`         | █████████████████                          |
-| `method-override`       | ██████████                                 |
-| `compression`           | ████████                                   |
-| `cors`                  | ███                                        |
-| `helmet`                | ██                                         |
-| `http-proxy-middleware` | █                                          |
-
 ## Synopsis
 
 ```js
@@ -53,13 +37,30 @@ app.use(bodyParser.raw({ type: '*/*', limit: '10mb' }))
 app.use(cookieParser())
 ```
 
-### Bundled type definitions
+## Middleware list
+
+Having looked at 126,822 files from 80,151 repositories, I came up with a list of top Express middlewares.
+
+| Middleware              | Popularity (number of repos, █ = 1k repos) |
+| ----------------------- | ------------------------------------------ |
+| `serve-static`          | ██████████████████████████████████████     |
+| `body-parser`           | ████████████████████████████               |
+| `morgan`                | ██████████████████████████                 |
+| `cookie-parser`         | █████████████████                          |
+| `method-override`       | ██████████                                 |
+| `compression`           | ████████                                   |
+| `cors`                  | ███                                        |
+| `helmet`                | ██                                         |
+| `http-proxy-middleware` | █                                          |
+
+## Bundled type definitions
 
 TypeScript definitions are bundled along with this package, so you don't have to…
 
-```json
+```js
 {
   "devDependencies": {
+  // No need!
     "@types/compression": "^1.7.0",
     "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.6",
@@ -73,7 +74,11 @@ TypeScript definitions are bundled along with this package, so you don't have to
 }
 ```
 
-### Configuration: turning features off
+## Configuration
+
+Check out the [default options in `src/index.ts`](https://github.com/dtinth/xprs/blob/master/src/index.ts#L19).
+
+### Turning features off
 
 Don’t need or don’t want some features? You can turn any of them off… in fact, you can turn all of them off!
 
@@ -100,26 +105,7 @@ const express = require('express')
 const app = express()
 ```
 
-### Re-exported modules
-
-You can access all the bundled modules:
-
-```js
-xprs.express
-xprs.static
-xprs.serveStatic
-xprs.bodyParser
-xprs.morgan
-xprs.cookieParser
-xprs.methodOverride
-xprs.compression
-xprs.cors
-xprs.helmet
-xprs.httpProxyMiddleware
-xprs.createProxyMiddleware
-```
-
-### Manually-enabled features
+### Manually enabling some features
 
 Some features have to be manually enabled.
 
@@ -147,3 +133,22 @@ Some features have to be manually enabled.
     }),
   )
   ```
+
+### Re-exported modules
+
+You can access all the bundled modules:
+
+```js
+xprs.express
+xprs.static
+xprs.serveStatic
+xprs.bodyParser
+xprs.morgan
+xprs.cookieParser
+xprs.methodOverride
+xprs.compression
+xprs.cors
+xprs.helmet
+xprs.httpProxyMiddleware
+xprs.createProxyMiddleware
+```
