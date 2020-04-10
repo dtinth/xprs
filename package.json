@@ -25,7 +25,7 @@
   },
   "name": "xprs",
   "description": "A bundle of most-commonly-used middlewares for express, based on analyzing over 80,000 public GitHub repos on BigQuery.",
-  "version": "0.0.1-hey-thanks-for-trying-out-xprs-hope-you-liked-it.1",
+  "version": "0.0.2-hey-thanks-for-checking-out-xprs-hope-you-liked-it.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
