@@ -161,8 +161,13 @@ namespace xprs {
   }
 }
 
-xprs.static = express.static
 xprs.express = express
+xprs.static = express.static
+xprs.json = express.json
+xprs.text = express.text
+xprs.urlencoded = express.urlencoded
+xprs.raw = express.raw
+xprs.Router = express.Router
 xprs.serveStatic = serveStatic
 xprs.bodyParser = bodyParser
 xprs.morgan = morgan
